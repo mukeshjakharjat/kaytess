@@ -1,0 +1,27 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- KAYTESS Logo Symbol -->
+  <g transform="translate(10, 10)">
+    <!-- Red rectangles -->
+    <rect x="0" y="2" width="6" height="20" fill="#FF0000"/>
+    <rect x="26" y="2" width="22" height="10" fill="#FF0000"/>
+    
+    <!-- Blue rectangles -->
+    <rect x="8" y="2" width="6" height="20" fill="#0000FF"/>
+    <rect x="16" y="2" width="6" height="20" fill="#0000FF"/>
+    
+    <!-- Red circles -->
+    <circle cx="7" cy="30" r="4" fill="#FF0000"/>
+    <circle cx="19" cy="30" r="4" fill="#FF0000"/>
+    
+    <!-- Blue circles -->
+    <circle cx="7" cy="38" r="4" fill="#0000FF"/>
+    <circle cx="19" cy="38" r="4" fill="#0000FF"/>
+    
+    <!-- Blue triangle -->
+    <polygon points="30,14 48,14 48,32 30,32" fill="#0000FF"/>
+  </g>
+  
+  <!-- KAYTESS text -->
+  <text x="70" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#1f2937">KAYTESS</text>
+  <text x="70" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#6b7280">Healthcare Staffing</text>
+</svg>

@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles for better mobile experience */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scrolling for horizontal tab navigation */
+.tab-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+:root {
+  --background: 210 11% 98%; /* #F5F7FA */
+  --foreground: 215 25% 15%; /* #222B36 */
+  --muted: 210 11% 95%; /* #F1F4F7 */
+  --muted-foreground: 215 15% 45%; /* #647382 */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 215 25% 15%; /* #222B36 */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 215 25% 15%; /* #222B36 */
+  --border: 210 11% 90%; /* #E5E9EC */
+  --input: 210 11% 90%; /* #E5E9EC */
+  --primary: 207 90% 54%; /* #2563EB - medical blue */
+  --primary-foreground: 210 100% 98%; /* #F5F8FF */
+  --secondary: 210 11% 95%; /* #F1F4F7 */
+  --secondary-foreground: 215 25% 15%; /* #222B36 */
+  --accent: 210 11% 95%; /* #F1F4F7 */
+  --accent-foreground: 215 25% 15%; /* #222B36 */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+  --ring: 207 90% 54%; /* #2563EB */
+  --radius: 0.5rem;
+
+  /* Custom healthcare colors */
+  --medical-blue: 207 90% 54%; /* #2563EB */
+  --healthcare-green: 160 84% 39%; /* #059669 */
+  --alert-red: 0 84% 60%; /* #EF4444 */
+}
+
+.dark {
+  --background: 215 25% 8%; /* #0F1419 */
+  --foreground: 210 11% 95%; /* #F1F4F7 */
+  --muted: 215 20% 12%; /* #1A2129 */
+  --muted-foreground: 215 15% 65%; /* #8A96A3 */
+  --popover: 215 25% 8%; /* #0F1419 */
+  --popover-foreground: 210 11% 95%; /* #F1F4F7 */
+  --card: 215 25% 8%; /* #0F1419 */
+  --card-foreground: 210 11% 95%; /* #F1F4F7 */
+  --border: 215 20% 18%; /* #293139 */
+  --input: 215 20% 18%; /* #293139 */
+  --primary: 207 90% 54%; /* #2563EB */
+  --primary-foreground: 210 100% 98%; /* #F5F8FF */
+  --secondary: 215 20% 15%; /* #222B36 */
+  --secondary-foreground: 210 11% 95%; /* #F1F4F7 */
+  --accent: 215 20% 15%; /* #222B36 */
+  --accent-foreground: 210 11% 95%; /* #F1F4F7 */
+  --destructive: 0 75% 55%; /* #DC2626 */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+  --ring: 207 90% 54%; /* #2563EB */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  /* Healthcare-specific color utilities */
+  .text-medical-blue {
+    color: hsl(var(--medical-blue));
+  }
+
+  .bg-medical-blue {
+    background-color: hsl(var(--medical-blue));
+  }
+
+  .text-healthcare-green {
+    color: hsl(var(--healthcare-green));
+  }
+
+  .bg-healthcare-green {
+    background-color: hsl(var(--healthcare-green));
+  }
+
+  .text-alert-red {
+    color: hsl(var(--alert-red));
+  }
+
+  .bg-alert-red {
+    background-color: hsl(var(--alert-red));
+  }
+
+  /* Custom button hover states for healthcare theme */
+  .hover\:bg-blue-700:hover {
+    background-color: #1d4ed8;
+  }
+
+  .hover\:bg-green-700:hover {
+    background-color: #047857;
+  }
+}
+
+/* Additional healthcare-specific styles */
+.medical-card {
+  @apply bg-white border border-slate-200 rounded-lg shadow-sm;
+}
+
+.medical-card:hover {
+  @apply shadow-md;
+}
+
+.priority-urgent {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.priority-emergency {
+  @apply bg-red-100 text-red-800;
+}
+
+.priority-regular {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-open {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-filled {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-completed {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.status-cancelled {
+  @apply bg-red-100 text-red-800;
+}
